@@ -5,7 +5,7 @@
 # Список my_favorite_songs содержит список названий и длительности каждого трека
 # Выведите общее время звучания трех случайных песен в формате
 # Три песни звучат ХХХ минут
-
+import random
 my_favorite_songs = [
     ['Waste a Moment', 3.03],
     ['New Salvation', 4.02],
@@ -18,12 +18,13 @@ my_favorite_songs = [
     ['In This World', 4.02],
 ]
 
-summ = 0
-n= int(input('Сколько песен выбрать? ')) 
-for i in range(n):
-    print("Название" , i+1 , "песни: " ,my_favorite_songs[i][0])
-    summ = summ + my_favorite_songs[i][1]
-print('Три песни звучат', summ, 'минут')
+s = 0
+list()
+list=random.sample(my_favorite_songs, 3)    
+print (list)                   
+for i in list:
+        s = s + float(i[1])
+print('Три песни звучат', f'{s:.1f}', 'минут')
 
 
 
@@ -31,7 +32,7 @@ print('Три песни звучат', summ, 'минут')
 # Есть словарь песен 
 # Распечатайте общее время звучания трех случайных песен
 # Вывод: Три песни звучат ХХХ минут.
-
+import random
 my_favorite_songs_dict = {
     'Waste a Moment': 3.03,
     'New Salvation': 4.02,
@@ -43,13 +44,18 @@ my_favorite_songs_dict = {
     'Nowhere to Run': 2.58,
     'In This World': 4.02,
 }
-summ = 0 
-n = int(input("Сколько песен выбрать? ")) 
-for i in range(n): 
-    n = input("Название "+str(i+1)+" песни: ") 
-    time = my_favorite_songs_dict[n] 
-    summ = summ + time 
-print("Три песни звучат:",summ," минут")
+
+total_time=0
+time_list=[]
+time_list_random=[]
+for time in my_favorite_songs_dict.values():
+    time_list.append(time)
+print (time_list)
+time_list_random=random.sample(time_list,3)
+print(time_list_random)
+for i in time_list_random:
+    total_time+=i
+print("Три песни звучат:",f'{total_time:.1f}'," минут")
 
 # Дополнительно для пунктов A и B
 # Пункт C.
