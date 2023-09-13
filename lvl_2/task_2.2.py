@@ -7,7 +7,7 @@
 # месяц 11 (ноябрь) является частью четвертого квартала.
 
 def quarter_of(month):
-    pass
+   
     if month in [1, 2, 3]:
         return '1'
     elif month in [4, 5, 6]:

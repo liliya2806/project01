@@ -9,7 +9,7 @@
 
 def switch_it_up(number):
     pass
-    match switch_it_up(number):
+    match number:
         case 1: 
             print ("One")
         case 2:
